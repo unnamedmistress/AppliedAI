@@ -1,0 +1,69 @@
+.demo-section h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.demo-flow {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.demo-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.step-marker {
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+}
+
+.step-content {
+  flex: 1;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.step-content p {
+  margin: 0;
+  color: #cbd5e0;
+  line-height: 1.6;
+}
+
+.step-arrow {
+  text-align: center;
+  font-size: 32px;
+  color: #667eea;
+  margin: 8px 0;
+}
+
+.demo-note {
+  margin-top: 32px;
+  padding: 20px;
+  background: rgba(251, 191, 36, 0.1);
+  border: 2px solid;
+  border-radius: 8px;
+  color: #fbbf24;
+  line-height: 1.6;
+}
+
+.demo-note strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .demo-step {
+    flex-direction: column;
+  }
+}

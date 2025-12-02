@@ -1,0 +1,99 @@
+.world-map-page {
+  min-height: 100vh;
+}
+
+.world-map-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.world-map-content h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #cbd5e0;
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.world-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-bottom: 60px;
+}
+
+.world-tile {
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 4px solid;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.world-tile.locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.world-tile:not(.locked):hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.world-tile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.world-tile-header h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.world-tagline {
+  color: #cbd5e0;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  min-height: 48px;
+}
+
+.world-progress {
+  margin-bottom: 24px;
+}
+
+.progress-text {
+  display: block;
+  font-size: 14px;
+  color: #a0aec0;
+  margin-bottom: 8px;
+}
+
+.unlock-requirement {
+  font-size: 14px;
+  color: #fbbf24;
+  margin-top: 16px;
+  font-style: italic;
+}
+
+.world-tile .btn {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .world-map-content h1 {
+    font-size: 32px;
+  }
+  
+  .world-grid {
+    grid-template-columns: 1fr;
+  }
+}
