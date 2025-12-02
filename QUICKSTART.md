@@ -73,6 +73,8 @@ Quick checklist of what's in the PRD:
 
 ## 📊 Key Numbers
 
+*(From PRD Section 3.2 - Success Metrics)*
+
 | Metric | Target |
 |--------|--------|
 | Activation (start World 1) | ≥ 60% |

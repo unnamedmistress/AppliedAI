@@ -5,8 +5,8 @@
 - **Product Name**: Super Learner Bros – AI Learning Adventure
 - **Document Type**: Product Requirements Document (PRD)
 - **Version**: 2.0
-- **Owner**: [YOUR NAME HERE]
-- **Date**: [INSERT DATE]
+- **Owner**: [YOUR NAME HERE] <!-- Replace with actual product owner name -->
+- **Date**: [INSERT DATE] <!-- Replace with document finalization date -->
 
 ---
 
