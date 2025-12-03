@@ -1,11 +1,14 @@
+import { useState } from 'react';
 import { acts } from '../data/acts';
 import { worlds } from '../data/worlds';
 import { useProgress } from '../hooks/useProgress';
 import Header from '../components/Header';
+import Toast from '../components/Toast';
 import './MyAIMovesPage.css';
 
 const MyAIMovesPage = () => {
   const { progress } = useProgress();
+  const [showToast, setShowToast] = useState(false);
 
   const unlockedPrompts = acts
     .filter(act => progress.unlockedPrompts.includes(act.promptRecipe.id))
@@ -17,7 +20,7 @@ const MyAIMovesPage = () => {
 
   const handleCopy = (prompt: string) => {
     navigator.clipboard.writeText(prompt);
-    alert('Prompt copied to clipboard!');
+    setShowToast(true);
   };
 
   return (
@@ -80,6 +83,10 @@ const MyAIMovesPage = () => {
           </div>
         </div>
       </div>
+      
+      {showToast && (
+        <Toast message="Prompt copied to clipboard!" onClose={() => setShowToast(false)} />
+      )}
     </div>
   );
 };

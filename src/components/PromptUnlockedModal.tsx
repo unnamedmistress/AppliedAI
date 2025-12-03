@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import type { PromptRecipe } from '../types';
+import Toast from './Toast';
 import './PromptUnlockedModal.css';
 
 interface Props {
@@ -8,9 +10,11 @@ interface Props {
 }
 
 const PromptUnlockedModal = ({ prompt, worldColor, onClose }: Props) => {
+  const [showToast, setShowToast] = useState(false);
+
   const handleCopy = () => {
     navigator.clipboard.writeText(prompt.prompt);
-    alert('Prompt copied to clipboard!');
+    setShowToast(true);
   };
 
   return (
@@ -38,6 +42,10 @@ const PromptUnlockedModal = ({ prompt, worldColor, onClose }: Props) => {
           </div>
         </div>
       </div>
+      
+      {showToast && (
+        <Toast message="Prompt copied to clipboard!" onClose={() => setShowToast(false)} />
+      )}
     </div>
   );
 };

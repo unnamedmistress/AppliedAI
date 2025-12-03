@@ -70,7 +70,18 @@ export const ProgressProvider: React.FC<{ children: ReactNode }> = ({ children }
   };
 
   const getCompletedActsForWorld = (worldId: string) => {
-    return progress.completedActs.filter(actId => actId.startsWith(worldId.replace('world-', 'w'))).length;
+    // Map world IDs to their act ID prefixes
+    const worldToActPrefix: Record<string, string> = {
+      'world-1': 'w1-',
+      'world-2': 'w2-',
+      'world-3': 'w3-',
+      'world-4': 'w4-',
+    };
+    
+    const prefix = worldToActPrefix[worldId];
+    if (!prefix) return 0;
+    
+    return progress.completedActs.filter(actId => actId.startsWith(prefix)).length;
   };
 
   return (
