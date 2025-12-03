@@ -119,6 +119,25 @@ npm run preview      # Preview production build locally
 npm run lint         # Run ESLint checks
 ```
 
+### Deployment
+
+The application is configured to deploy to GitHub Pages automatically via GitHub Actions.
+
+**Automatic Deployment:**
+- Push to the `main` branch to trigger deployment
+- GitHub Actions workflow builds and deploys to GitHub Pages
+- View your site at: `https://unnamedmistress.github.io/AppliedAI/`
+
+**Manual Deployment:**
+1. Build the project: `npm run build`
+2. The `dist` folder contains the production build
+3. Deploy the `dist` folder to your hosting platform
+
+**GitHub Pages Configuration:**
+- The app uses a base path of `/AppliedAI/` for GitHub Pages
+- Client-side routing is handled via `404.html` fallback
+- Enable GitHub Pages in repository settings (Settings → Pages → GitHub Actions)
+
 ### Technology Stack
 
 | Category | Technology |
