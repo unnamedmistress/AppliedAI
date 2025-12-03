@@ -10,7 +10,7 @@ import './App.css';
 function App() {
   return (
     <ProgressProvider>
-      <Router>
+      <Router basename="/AppliedAI">
         <div className="app">
           <Routes>
             <Route path="/" element={<HomePage />} />
